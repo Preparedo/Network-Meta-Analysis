@@ -82,8 +82,8 @@ summary(result)
 plot(result)
 
 #Safety Data with Events in Different Arms
-Network_Frame <- read_excel("D:/桌面/血液内科/BTK抑制剂网状meta/网状meta分析数据框架.xlsx", sheet = "SAE")
-Network_Description <- read_excel("D:/桌面/血液内科/BTK抑制剂网状meta/网状meta分析数据描述.xlsx", sheet = "SAE")
+Network_Frame <- read_excel(" ", sheet = " ")
+Network_Description <- read_excel(" ", sheet = " ")
 network <- mtc.network(Network_Frame, treatments = Network_Description)
 model <- mtc.model(network, likelihood ="binom", link = "log", type = "consistency", linearModel = "random", dic = TRUE, om.scale = 2, re.prior.sd = 2)
 cat(model$code)
@@ -572,5 +572,5 @@ filtered_desc_list <- map(set_names(sheet_names), function(sheet_name) {
   filtered_desc <- desc_data %>% filter(id %in% treatments)
   return(filtered_desc)
 })
-output_path <- "D:/桌面/血液内科/BTK抑制剂网状meta/网状meta分析数据描述-2.xlsx"
+output_path <- " "
 write_xlsx(filtered_desc_list, path = output_path)
